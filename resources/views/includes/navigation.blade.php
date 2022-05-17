@@ -41,13 +41,14 @@
                 </a>
 
                 <div class="dropdown-menu fade-down m-0">
-                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                        Déconnexion
-                    </a>
 
                     <a class="dropdown-item" href="{{ route('getProfil',  ['id' => Auth::user()->id]) }}">
                         Mon profil
+                    </a>
+
+                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                        Déconnexion
                     </a>
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
